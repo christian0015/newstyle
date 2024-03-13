@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+    <link rel="styleSheet" href="index.css">
+</head>
+
+<body>
+    <div class="center">
+        <header>
+            <div id="logo">01</div>
+            <nav>
+                <div class="item">Moonish</div>
+                <div class="item">New in</div>
+                <div class="item">Hot drops</div>
+                <div class="item">Collection</div>
+            </nav>
+
+            <div class="titlePage">
+                02 chop <br> NEW COLLECTION
+            </div>
+
+        </header>
+    </div>
+    <!-- <img src="Asset/background_font.jpeg" alt="" srcset=""> -->
+
+    <div class="center">
+        <div class="contentBlock">
+            <!-- Sup -->
+            <div class="superieure">
+                <div id="logo">02</div>
+                <div class="descript">
+                    <div class="logo2">01</div>
+                    <div>Classic Hoodie <br>By 02 Studio <br><br> The Late 2050 <br>
+                        <br> Lorem, ipsum dolor sit amet
+                        <br>
+                        Temporibus beata.
+                    </div>
+                    <div>The Late 2050 <br><br> consectetur adipisicing elit.
+                        <br>voluptatum vel excepturi?
+                    </div>
+                </div>
+                <div>
+                    <div class="connexion">Login in </div>
+                    <div><img src="" alt=""></div>
+                </div>
+            </div>
+
+            <!-- Inf -->
+            <div class="Inf">
+                <div></div>
+                <div class="inf2">
+                    <div class="assorti">
+                        <div class="nomAssorti">Nike<br>SNEAKERS</div>
+                        <img src="Asset/Article/airforce.png" width="300" alt="" srcset="">
+                        <div class="search">search</div>
+                    </div>
+
+                    <div class="notification">Notification</div>
+
+                </div>
+
+                <div class="inf3">
+                    <div>
+                        <div class="logo3">01</div>
+                    </div>
+                    <div>
+                    </div>
+                    <div style="display: flex;align-items: center;">
+                        <div class="indication">Hoodie</div>
+                        <!-- <img src="Asset/Article/tricot.png" width="300" alt="" srcset="" class="articleJour"> -->
+                        <!-- Les images -->
+                        <img src="Asset/Article/tricot (5).png" alt="Image 1" id="image1" class="articleJour"
+                            style="display: none;">
+                        <img src="Asset/Article/tricot (4).png" alt="Image 2" id="image2" class="articleJour"
+                            style="display: none;">
+                        <img src="Asset/Article/tricot (3).png" alt="Image 3" id="image3" class="articleJour"
+                            style="display: none;">
+                    </div>
+
+                    <div style="display: flex;">
+                        <div class="barre" id="barre1" onclick="afficherImage(1)"></div>
+                        <div class="barre" id="barre2" onclick="afficherImage(2)"></div>
+                        <div class="barre" id="barre3" onclick="afficherImage(3)"></div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="center">
+        <article>
+            <div class="articleSelf">
+                <img src="Asset/Article/airforce.png"  width="300" alt="" srcset="">
+                <div class="articleDescription">
+                    <div class="articleNom">NEW . COSMI &copy; <br> SET 23 &real;;</div>
+                    <div>HOT DROP <br> BY 02 STUDIO <br>2023 </div>
+                    <div> Moonish <br> COLLECTION</div>
+                </div>
+            </div>
+            
+            <div class="articleLink">
+                <div>GO TO VISIT ?</div>
+                <div></div>
+            </div>
+        </article>
+    </div>
+
+
+        <br><br><br><br><br><br><br><br><br><br>
+</body>
+
+<script>
+    function afficherImage(numImage) {
+
+        var barres = document.querySelectorAll('.barre');
+        barres.forEach(function (barre) {
+            barre.style.backgroundColor = 'gray';
+        });
+
+        // Masquer toutes les images
+        var images = document.querySelectorAll('.articleJour');
+        images.forEach(function (image) {
+            image.style.display = 'none';
+
+
+        });
+
+        // Afficher l'image correspondante
+        var imageId = 'image' + numImage;
+        var imageToShow = document.getElementById(imageId);
+        if (imageToShow) {
+            imageToShow.style.display = 'block';
+        }
+
+        // Afficher l'indicateur correspondante
+        var barreId = 'barre' + numImage;
+        var barreToShow = document.getElementById(barreId);
+        if (barreToShow) {
+            barreToShow.style.display = 'block';
+            barreToShow.style.backgroundColor = 'white';
+        }
+    }
+
+
+    afficherImage(1)
+</script>
+
+</html>
