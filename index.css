@@ -283,7 +283,11 @@ article img{
     nav{
         display: none;
     }
-
+    .contentBlock{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
     .superieure{
         justify-content: center;
     }
@@ -299,11 +303,11 @@ article img{
     flex-wrap: wrap;
     justify-content: center; 
     gap: 50px;
-    /* margin-top: 0px; */
+    margin-top: 20px;
 }
 
 .inf2{
-    margin-left: -20px;
+    margin-left: -50px;
 }
 .barre{
     margin-left: -100px;
