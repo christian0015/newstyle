@@ -10,7 +10,7 @@
 
 body{
     /* background-image: url("Asset/background_font9.jpeg"); */
-    background-color: rgb(121, 121, 121);
+    /* background-color: rgb(121, 121, 121); */
     background-position: cover;
     background-size: cover;
     background-attachment: fixed;
@@ -155,7 +155,7 @@ h3{
 .categorie{
     display: flex;
     gap: 15px;
-    background-color: #ddd;
+    background-color: rgb(221, 221, 204);
     width: 100%;
     padding: 15px;
     border-radius: 20px;
