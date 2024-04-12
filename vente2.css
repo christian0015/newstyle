@@ -61,10 +61,18 @@ nav{
 
 }
 .imageEnteteContainer{
+    position: relative;
     /* width: 100%; */
     display: flex;
     justify-content: center;
     padding: 0 0 20px;
+}.imageEnteteContainer::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 261px;
+    background-color: rgba(23, 19, 27, 0.342);
+    z-index: 10;
 }
 .imageEntete{
     width: 100%;
