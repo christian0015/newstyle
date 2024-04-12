@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    /* background-image: url("Asset/background_font9.jpeg"); */
+    background-color: rgb(121, 121, 121);
+    background-position: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: rgba(185, 185, 185, 0.438);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    margin-top: 30px;
+    border-radius: 100px;
+    overflow: hidden;
+    backdrop-filter: blur(5px); /* Flou appliqué à l'arrière-plan */
+    filter: blur(0px); 
+}
+
+header a{ text-decoration: none; color: #f1f1f1;}
+
+#logo{
+    font-size: 25px;
+    font-weight: bold;
+    filter: drop-shadow(2px 3px 4px rgb(255, 255, 255));
+    font-family: monospace;
+    padding-left: 20px;
+}
+
+.titlePage{
+    padding-right: 100px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.produitEntete{
+    background-color: rgb(245, 245, 245);
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    
+
+}
+.imageEnteteContainer{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    padding: 0 0 20px;
+}
+.imageEntete{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border: solid 2px  #ddd;
+    border-radius: 8px;
+    padding: 10px;
+}
+.allInfoEntete{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+h3{
+    color: rgb(143, 143, 44);
+
+}
+.descriptionEntete{
+    width: 100%;
+}
+
+.prixEntete{
+    font-weight: 300; font-size: 20px;
+}
+.selectNumerEntete{ width: 25px;}
+.ajoutPanierEntete{ 
+    background-color: rgb(143, 143, 44);
+    color: rgb(255, 255, 255);
+    width: 150px; 
+    font-size: 10px; 
+    padding: 4px;
+    border: none;
+    border-radius: 8px;
+}
+.ajoutPanierEntete::before{
+    content: "";
+    position: absolute;
+    margin-left: 125px;
+    background-color: rgb(143, 143, 44);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+
+.prixCategorie{
+    font-weight: 300; font-size: 20px;
+}
+.selectNumerCategorie{ width: 25px;}
+.ajoutPanierCategorie{ 
+    background-color: rgb(143, 143, 44);
+    color: rgb(255, 255, 255);
+    width: 150px; 
+    font-size: 13px; 
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+}
+.ajoutPanierCategorie::before{
+    content: "";
+    position: absolute;
+    margin-left: 135px;
+    background-color: rgb(143, 143, 44);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+
+.allTypical{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.categorie{
+    display: flex;
+    gap: 15px;
+    background-color: #ddd;
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+}
+.descriptionCategorie{
+    font-size: 20px;
+}
+
+.imgCategorie{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+@media only screen and (max-width:780px){
+
+    nav{
+        display: none;
+    }
+
+    .allInfoEntete{
+        max-width: 70%;
+        display: flex; flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    .descriptionEntete{
+        width: 100%;
+        font-size: 18px ;
+    
+    }
+    .prixEntete{
+        font-weight: 300; font-size: 30px;
+    }
+    .selectNumerEntete{ width: 40px; height: 30px; font-size: 30px;}
+    .ajoutPanierEntete{ color: aliceblue; width: 200px; font-size: 18px; padding: 12px; border-radius: 10px;}
+    .ajoutPanierEntete::before{
+        margin-left: 200px;
+    }
+
+    .allTypical{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .categorie{
+        gap: 15px;
+        width: 90%;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .descriptionCategorie{
+        font-size: 25px;
+    }
+
+    .categorie h3{
+        font-size: 20px;
+    }
+
+
+    .prixCategorie{
+        font-weight: 300; font-size: 30px;
+    }
+    .selectNumerCategorie{ width: 40px; height: 30px; font-size: 30px;}
+    .ajoutPanierCategorie{ color: aliceblue; width: 150px; font-size: 15px; padding: 8px; border-radius: 10px;}
+    .ajoutPanierCategorie::before{
+        display: none;
+    }
+    
+}
+    
+/* 
+.prixCategorie{
+    font-weight: 300; font-size: 20px;
+}
+.selectNumerCategorie{ width: 25px;}
+.ajoutPanierCategorie{ 
+    background-color: rgb(143, 143, 44);
+    color: rgb(255, 255, 255);
+    width: 150px; 
+    font-size: 13px; 
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+}
+.ajoutPanierCategorie::before{
+    content: "";
+    position: absolute;
+    margin-left: 135px;
+    background-color: rgb(143, 143, 44);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+
+.allTypical{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    gap:  50px;
+    margin-top: 100px;
+}
+
+.categorie{
+    background-color: #ddd;
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.imgCategorie{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+.allTypical{
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    justify-content: center;
+    gap:  40px;
+}
+
+.categorie
+
+
+
+.prixCategorie{
+    font-weight: 300; font-size: 30px;
+}
+.selectNumerCategorie{ width: 40px; height: 30px; font-size: 30px;}
+.ajoutPanierCategorie{ color: aliceblue; width: 150px; font-size: 15px; padding: 8px; border-radius: 10px;}
+.ajoutPanierCategorie::before{
+    display: none;
+} */
